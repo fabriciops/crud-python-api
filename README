@@ -1,0 +1,41 @@
+A API foi desenvolvida sem Framework, portanto basta executar os comando das dependências
+e realizar os testes seja via POSTMAN ou pelo próprio arquivo test.py.
+
+Para a instalação das dependências:
+
+1 - pip install -r requierements.txt
+
+O arquivo acima se encontra na pasta part-1 requierements.txt
+
+2 - Import o arquivo apilinx.sql para um banco MySql
+
+3 - Na pasta src/config.py é onde se encontra toda a configuração de banco. Por tanto é de suma 
+importância que seja configurado de acordo com o acesso do seu ambiente.
+
+BANCO DE DADOS  [
+                    host = "localhost"
+                    user = "root"
+                    passwd = ""
+                    database = "apiLinx"
+                ]
+
+Para a execução da API basta está na pasta src e executar o seguinte comando:
+
+python api.py
+
+Agora A API está de pé e podendo ser acessada pelas seguintes portas.
+
+1 - Trás todos os registros do bando de DADOS
+http://127.0.0.1:5000/
+
+
+2 - Cria um novo registro
+
+Enviando no Body->raw um objeto no formato descrito abaixo
+[{"id": "5", "name": "testemais", "img": "img.png"}]
+
+http://127.0.0.1:5000/create_product
+
+3 - Atualiza um determinado objeto já inserido no bando a partir do seu ID.
+[{"id": "5", "name": "newName", "img": "img.png"}]
+http://127.0.0.1:5000/update

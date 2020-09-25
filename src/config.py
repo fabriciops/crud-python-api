@@ -1,0 +1,5 @@
+host = "localhost"
+user = "root"
+passwd = ""
+database = "apiLinx"
+secretkey = "Li@x"
